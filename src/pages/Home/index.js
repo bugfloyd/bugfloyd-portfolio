@@ -12,8 +12,7 @@ import { Helmet } from "react-helmet";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import WordPressIcon from "../../misc/icons/WordPress";
-
-//import Header from "../../components/Header";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -121,6 +120,15 @@ const Home = () => {
                   className={classes.icons}
                 >
                   <WordPressIcon />
+                </Link>
+              </Grid>
+              <Grid item xs>
+                <Link
+                  href="https://www.linkedin.com/in/yashar-hosseinpour/"
+                  target="blank"
+                  className={classes.icons}
+                >
+                  <LinkedInIcon />
                 </Link>
               </Grid>
               <Grid item xs>
