@@ -2,6 +2,8 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
+import Home from "./pages/Home";
+
 import "./App.css";
 
 function App() {
@@ -9,7 +11,7 @@ function App() {
     <>
       <CssBaseline />
       <Switch>
-        <Route exact path="/" render={() => <p>test</p>} />
+        <Route exact path="/" component={Home} />
       </Switch>
     </>
   );
