@@ -1,6 +1,7 @@
 {
   "name": "yashar",
   "version": "0.1.0",
+  "homepage": "https://bugfoyd.github.io/yash.ar-frontend",
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
@@ -77,7 +78,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "predeploy": "node scripts/build.js",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -153,5 +156,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
