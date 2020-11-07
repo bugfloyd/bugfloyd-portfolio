@@ -1,7 +1,7 @@
 {
   "name": "yashar",
   "version": "0.1.0",
-  "homepage": "https://bugfoyd.github.io/yash.ar-frontend",
+  "homepage": "https://yash.ar",
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
