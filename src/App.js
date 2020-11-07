@@ -12,6 +12,7 @@ function App() {
       <CssBaseline />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/yash.ar-frontend" component={Home} />
       </Switch>
     </>
   );
