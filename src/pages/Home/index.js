@@ -4,11 +4,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import Particles from "../../components/Particles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
+import Link from "@material-ui/core/Link";
+
 import Typed from "react-typed";
 import { Helmet } from "react-helmet";
 
 import GitHubIcon from "@material-ui/icons/GitHub";
 import TwitterIcon from "@material-ui/icons/Twitter";
+import WordPressIcon from "../../misc/icons/WordPress";
 
 //import Header from "../../components/Header";
 
@@ -26,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     padding: theme.spacing(2),
     zIndex: 1,
-    backgroundColor: "#00000085",
+    backgroundColor: "#00000090",
   },
   avatar: {
     width: theme.spacing(15),
@@ -35,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     color: "tomato",
-    marginBottom: theme.spacing(1),
+    marginBottom: theme.spacing(2),
   },
   subtitle: {
     color: "tan",
@@ -50,6 +53,12 @@ const useStyles = makeStyles((theme) => ({
     width: "100vw",
     textAlign: "center",
     zIndex: 1,
+  },
+  icons: {
+    color: "#bbb",
+    "&:hover": {
+      color: "#ddd",
+    },
   },
 }));
 
@@ -86,7 +95,9 @@ const Home = () => {
               </Typography>
               <Typography className={classes.subtitle} variant="h5">
                 <Typed
-                  strings={["software engineer full-stack developer sysAdmin"]}
+                  strings={[
+                    "software engineer full-stack developer system admin",
+                  ]}
                   typeSpeed={40}
                   backSpeed={50}
                   loop={false}
@@ -95,10 +106,31 @@ const Home = () => {
             </Grid>
             <Grid container spacing={3} style={{ width: "200px" }}>
               <Grid item xs>
-                <GitHubIcon />
+                <Link
+                  href="https://github.com/bugfloyd"
+                  target="blank"
+                  className={classes.icons}
+                >
+                  <GitHubIcon />
+                </Link>
               </Grid>
               <Grid item xs>
-                <TwitterIcon />
+                <Link
+                  href="https://profiles.wordpress.org/yashar_hv/"
+                  target="blank"
+                  className={classes.icons}
+                >
+                  <WordPressIcon />
+                </Link>
+              </Grid>
+              <Grid item xs>
+                <Link
+                  href="https://twitter.com/bugfloyd"
+                  target="blank"
+                  className={classes.icons}
+                >
+                  <TwitterIcon />
+                </Link>
               </Grid>
             </Grid>
           </Grid>
