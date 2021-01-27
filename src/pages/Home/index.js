@@ -37,12 +37,11 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     color: "tomato",
-    marginBottom: theme.spacing(2),
+    marginBottom: theme.spacing(3),
   },
   subtitle: {
     color: "tan",
-    width: "9em",
-    height: "6em",
+    marginBottom: theme.spacing(1),
   },
   typedContainer: {
     position: "absolute",
@@ -53,10 +52,14 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     zIndex: 1,
   },
+  iconWrap: {
+    width: "200px",
+    marginTop: theme.spacing(3),
+  },
   icons: {
-    color: "#bbb",
+    color: "#b2b2b2",
     "&:hover": {
-      color: "#ddd",
+      color: "#eee",
     },
   },
 }));
@@ -72,10 +75,10 @@ const Home = () => {
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
         />
         <meta charSet="utf-8" />
-        <title>Home | Yashar Hosseinpour</title>
+        <title>Yashar Hosseinpour | DevOps Engineer</title>
         <meta
           name="description"
-          content="Yashar Hosseinpour | Software Engineer"
+          content="Yashar Hosseinpour | DevOps engineer, Full-Stack developer, sysAdmin"
         />
       </Helmet>
       <Animate to="1" from="0" attributeName="opacity">
@@ -88,22 +91,21 @@ const Home = () => {
             justify="center"
             style={{ minHeight: "100vh" }}
           >
-            <Grid item xs={4}>
+            <Grid item xs={12}>
               <Typography className={classes.title} variant="h4">
                 Yashar Hosseinpour
               </Typography>
               <Typography className={classes.subtitle} variant="h5">
-                <Typed
-                  strings={[
-                    "software engineer full-stack developer system admin",
-                  ]}
-                  typeSpeed={40}
-                  backSpeed={50}
-                  loop={false}
-                />
+                DevOps Engineer
+              </Typography>
+              <Typography className={classes.subtitle} variant="h5">
+                Full-stack Developer
+              </Typography>
+              <Typography className={classes.subtitle} variant="h5">
+                System Admin
               </Typography>
             </Grid>
-            <Grid container spacing={3} style={{ width: "200px" }}>
+            <Grid container spacing={3} className={classes.iconWrap}>
               <Grid item xs>
                 <Link
                   href="https://github.com/bugfloyd"
